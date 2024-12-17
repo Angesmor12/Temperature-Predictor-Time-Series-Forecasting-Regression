@@ -68,6 +68,11 @@ async function normalizeInputs(inputs) {
       result.message = 'The ' + input.getAttribute('placeholder') + ' is empty.';
       break;
     } 
+    else if (input.value < 0){
+      result.status = false;
+      result.message = 'The ' + input.getAttribute('placeholder') + ' cannot be less than 0.';
+      break;
+    }
 
     let input_min_value = normalizationJsonInfo.min_values[input.getAttribute("data-key")]
     let input_max_value = normalizationJsonInfo.max_values[input.getAttribute("data-key")]
