@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Temperature Predictor</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
+    <meta name='keywords' content='AI, artificial intelligence, machine learning, predictive modeling, climate prediction, Delhi temperature prediction, weather forecasting, historical weather data, ARIMA, deep learning, LSTM, GRU, climate analytics, temperature trends, predictive algorithms, AI tools, data-driven weather models, climate forecasting tools' />
+    <meta name='author' content='Angelo Smorlesi' />
+    <meta name='description' content='A platform where you can provide relevant climatic data for Delhi to predict the average temperature for the day. This model is powered by artificial intelligence and trained on historical weather data from 2013 to 2017.' />
+    <meta name='copyright' content='Angelo Smorlesi' />
+    <meta name='robots' content='index,follow,translate' />
+    <link rel="icon" href="./images/weather.ico" type="image/x-icon" />
+
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.14.0/dist/onnxruntime-web.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+
+      <div class="img-container">
+        <img
+          class="Indian-city-image"
+          src="./images/indian-city-climate.png"
+          alt="Indian-city-climate">
+      </div>
+
+        <div class="container-text">
+          <h2>Delhi Temperature Predictor</h2>
+          <p>Enter the relevant climatic data for Delhi (India), and you will receive the predicted average temperature for the day. This artificial intelligence model has been trained using extensive historical weather data from 2013 to 2017, specifically tailored to Delhi's unique climate.</p>
+          <div class="input-container">
+
+            <select class="algorithm-input">
+              <option value="neural_network">Select the algorithm </option>
+              <option value="neural_network" selected>Neural network</option>
+              <option value="ensembles">Ensembles</option>
+            </select>
+
+            <p class="warning-text hidden">Ensemble algorithms may take a few minutes to complete</p>
+             
+            <div class="options-predictions-container">
+              <h2>Forecasting options</h2>
+
+              <select class="seasonal-input">
+                <option value="1" selected>Select seasonality</option>
+                <option value="1">Diary</option>
+                <option value="7">Weekly</option>
+              </select>
+
+              <select class="columns-input">
+                <option value="one-column" selected>Select features</option>
+                <option value="one-column">One</option>
+                <option value="multiple-columns">Multiple</option>
+              </select>
+
+            </div>
+
+            <div class="single-column-inputs inputs-container">
+                  <input class="input-daily" type="number" placeholder="Mean temperature 1" data-key="meantemp">
+            </div>          
+
+            <div class="multiple-column-inputs inputs-container none">
+                <div class="input-weekly">
+                  <input class="m-c-temp" type="number" placeholder="Mean temperature 1" data-key="meantemp">
+                  <input class="m-c-hum" type="number" placeholder="Humidity 1" data-key="humidity">
+                  <input class="m-c-wind" type="number" placeholder="Wind speed (kmph) 1" data-key="wind_speed">
+                  <input class="m-c-press" type="number" placeholder="Mean pressure 1" data-key="meanpressure">
+                </div>
+            </div>
+
+            <div class="hidden loading-image-container"><img class="loading-image" src="./images/loading.gif" alt="loading"></div>
+
+        </div>
+          <button class="calculate" type="submit">Forecast</button>
+          <div class="meantemp_container hidden"><p id="meantemp_text">Estimated mean temperature : <p id="meantemp_value"></p></p></div>
+          <span>@Angelo Smorlesi</span>
+        </div>
+      </div>
+      <script src="index.js"></script>
+</body>
+</html>

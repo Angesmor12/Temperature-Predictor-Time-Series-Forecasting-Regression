@@ -1,0 +1,13 @@
+,Dataset,Algorithm,bootstrap,max_depth,max_features,min_samples_leaf,min_samples_split,n_estimators,max_samples,learning_rate,loss,estimator__max_depth,estimator__min_samples_split,subsample,seasonal_value
+0,dataset_n,Random-Forest,True,10.0,sqrt,4.0,5.0,50.0,,,,,,,1.0
+1,dataset_n,Random-Forest,True,20.0,sqrt,1.0,2.0,100.0,,,,,,,7.0
+2,dataset_n,Random-Forest,True,20.0,sqrt,1.0,2.0,100.0,,,,,,,15.0
+3,dataset_n,Bagging,False,,,,,20.0,0.2,,,,,,1.0
+4,dataset_n,Bagging,False,,,,,20.0,0.2,,,,,,7.0
+5,dataset_n,Bagging,True,,,,,100.0,0.8,,,,,,15.0
+6,dataset_n,Ada-Boost,,,,,,200.0,,0.001,linear,5.0,2.0,,1.0
+7,dataset_n,Ada-Boost,,,,,,200.0,,0.001,linear,5.0,2.0,,7.0
+8,dataset_n,Ada-Boost,,,,,,200.0,,0.001,linear,5.0,2.0,,15.0
+9,dataset_n,Gradient-Boosting-Regressor,,3.0,log2,4.0,10.0,50.0,,0.5,,,,0.8,1.0
+10,dataset_n,Gradient-Boosting-Regressor,,10.0,sqrt,2.0,10.0,100.0,,0.1,,,,1.0,7.0
+11,dataset_n,Gradient-Boosting-Regressor,,10.0,sqrt,2.0,10.0,100.0,,0.1,,,,1.0,15.0

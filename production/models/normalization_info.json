@@ -1,0 +1,14 @@
+{
+    "min_values" : {
+        "meantemp" : 6.000000,
+        "humidity" : 13.428571,
+        "wind_speed" : 0.000000,
+        "meanpressure" : -3.041667
+    },
+    "max_values" : {
+        "meantemp" : 38.714286,
+        "humidity" : 100.000000,
+        "wind_speed" : 42.220000,
+        "meanpressure" : 7679.333333
+    }
+}

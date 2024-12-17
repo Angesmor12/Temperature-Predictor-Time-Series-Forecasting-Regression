@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+.none{
+  display: none;
+}
+
+.meantemp_container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #EEF0F7;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+html{
+  height: 100%;
+}
+
+.container {
+  background-color: #fff;
+  width: 950px;
+  height: 100%;
+  overflow-y: scroll;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  line-height: 1.5;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.185);
+  padding-top: 3rem;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  background-image: linear-gradient(to bottom right, #fceea7, #e1804f);
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.container-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background-color: #fff;
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  font-size: 1.7rem;
+  color: #2E4052;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+}
+
+.input-daily:first-of-type{
+  margin-right: 0 !important;
+  
+}
+
+.input-daily:first-child{
+  margin-right: 0 !important;
+}
+
+.img-container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.img-container img{
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 2rem;
+}
+
+.calculate{
+  margin-top: 1.2rem;
+}
+
+.container-text {
+  padding: 10px 40px 10px 10px;
+  height: 100%;
+}
+
+.container-text h2 {
+  font-size: 1.5rem;
+  margin-top: 0.8rem;
+  color: #1A2250;
+}
+
+.container-text p {
+  font-size: 14px;
+  color: #3B4169;
+  margin: 10px 0;
+}
+
+.meantemp_container{
+  margin-top: 1rem;
+}
+
+.loading-image{
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.loading-image-container{
+  width: 100%;
+  bottom: -135px;
+  text-align: center;
+  position: absolute;
+}
+
+#meantemp_text{
+  font-size: 0.9rem;
+}
+#meantemp_value{
+  padding-left: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.container-text input,
+.container-text button {
+  width: 100%;
+  border: none;
+  padding: 14px;
+  border-radius: 3px;
+}
+
+.input-container{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.container-text input, .input-container select{
+  border: 2px solid #DADDEC;
+  margin: 0;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-bottom: 1rem;
+  width: 46%;
+  height: 20px;
+  font-size: 1rem;
+  color: #656880;
+}
+
+.container-text input::placeholder, .input-container select::placeholder{
+  font-size: 0.95rem;
+}
+
+.input-container select{
+  width: 100%;
+  margin-bottom: 0 !important;
+  margin-top: 0.5rem !important;
+  height: 2rem;
+}
+
+.warning-text{
+  width: 100%;
+  padding-left: 0.5rem !important;
+  padding-top: 0.15rem !important;
+  padding-bottom: 0.15rem !important;
+  margin: 0 !important;
+  color: rgb(255,0,0) !important;
+  font-size: 0.825rem !important;
+  font-weight: 550;
+}
+
+.container-text button {
+  background-image: linear-gradient(to right, #89CAFF, #6589FF);
+  display: block;
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 20px #89caff94;
+  transition: box-shadow .3s ease-in-out;
+}
+
+.container-text button:hover {
+  box-shadow: none;
+}
+
+.container-text span {
+  display: block;
+  text-align: center;
+  margin: 20px 0 0;
+  color: #BABDCB;
+  font-size: 12px;
+}
+
+.inputs-container{
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
+.options-predictions-container h2{
+  margin-top: 0;
+}
+
+.inputs-container div{
+  width: 100%;
+  border: #DADDEC 2px solid;
+  padding: 0.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+}
+
+.inputs-container div input{
+  width: 48%;
+}
+
+.options-predictions-container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.options-predictions-container h2{
+  padding: 0.25rem;
+  width: 100%;
+  font-size: 1.05rem;
+}
+
+.options-predictions-container select{
+  width: 48%;
+}
+
+@media (max-width: 930px) {
+
+  .img-container {
+      display: none;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    height: 120%;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  input{
+    width: 100% !important;
+  }
+
+  .container-text{
+    padding: 1rem !important;
+    overflow-y: scroll;
+  }
+
+  body{
+    overflow: auto !important;
+  }
+
+}
