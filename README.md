@@ -1,5 +1,5 @@
 # Temperature Predictor 
-# ( Time Series Forecasting/Regression )
+# (Time Series Forecasting/Regression)
 
 Artificial Intelligence Project Focused on Time Series Models
 
